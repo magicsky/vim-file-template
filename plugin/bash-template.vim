@@ -25,10 +25,6 @@ def findProjectSetting(root):
 	else:
 		return findProjectSetting(os.path.dirname(root))
 
-def isHeader(filePath):
-	extName = os.path.splitext(filePath)[1]
-	return extName.lower() in [".h", ".hh", ".hpp"]
-
 # 当前文件的路径
 filePath = os.path.realpath(vim.eval("expand('%:p')"))
 fileName = os.path.basename(filePath)
@@ -38,6 +34,10 @@ rootPath = findProjectSetting(os.path.dirname(filePath))
 projectName = os.path.basename(os.path.dirname(filePath))
 # 作者
 author = os.environ["USER"]
+try:
+    author = vim.eval("g:author")
+except Exception:
+    pass
 # 作者email
 authorEmail = None
 try:

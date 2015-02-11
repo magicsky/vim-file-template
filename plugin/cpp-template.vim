@@ -38,6 +38,10 @@ rootPath = findProjectSetting(os.path.dirname(filePath))
 projectName = os.path.basename(os.path.dirname(filePath))
 # 作者
 author = os.environ["USER"]
+try:
+    author = vim.eval("g:author")
+except Exception:
+    pass
 # 作者email
 authorEmail = None
 try:
