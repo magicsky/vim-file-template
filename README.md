@@ -2,6 +2,7 @@
 提供文件默认的模板格式
 
 <script type="text/javascript" src="https://asciinema.org/a/16281.js" id="asciicast-16281" async></script>
+
 比如新建一个C的头文件时，会默认生成如下代码：
 ```cpp
 /**
