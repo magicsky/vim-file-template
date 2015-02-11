@@ -10,6 +10,7 @@ templateDefines = [
     os.path.join(selfDirPath, "bash-template.vim"),
     os.path.join(selfDirPath, "cpp-template.vim"),
     os.path.join(selfDirPath, "python-template.vim"),
+    os.path.join(selfDirPath, "yaml-template.vim"),
 ]
 for templateDefine in templateDefines:
     vim.command("source " + templateDefine)
