@@ -6,7 +6,14 @@ import os
 import vim
 selfFilePath = os.path.realpath(vim.eval("s:selfFilePath"))
 selfDirPath = os.path.dirname(selfFilePath)
-vim.command("source " + os.path.join(selfDirPath, "cpp-template.vim"))
+templateDefines = [
+    os.path.join(selfDirPath, "bash-template.vim"),
+    os.path.join(selfDirPath, "cpp-template.vim"),
+    os.path.join(selfDirPath, "python-template.vim"),
+]
+for templateDefine in templateDefines:
+    vim.command("source " + templateDefine)
+
 EOF
 
 
