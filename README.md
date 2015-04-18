@@ -6,7 +6,7 @@
 /**
  * @file c.h
  * @brief
- * @author wul (garcia.wul@alibaba-inc.com)
+ * @author wul 
  * @date 2015-02-11 11:51
  *
  */
@@ -29,6 +29,6 @@ Bundle 'magicsky/vim-file-template'
 ```yaml
 name: test
 author: wuliang
-authorEmail: garcia.wul@alibaba-inc.com
+authorEmail: garcia.relax@gmail.com
 ```
 
